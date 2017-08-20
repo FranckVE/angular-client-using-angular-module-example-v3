@@ -1,4 +1,85 @@
-# AngularClientUsingAngularModuleExampleV3
+# project building process
+
+## preparation commands
+
+```bash
+cd ~/Documents/WebStormProjects2017
+curl -u 'FranckVE' https://api.github.com/user/repos -d '{"name":"angular-client-using-angular-module-example-v3", "private": false, "has_issues": true, "has_projects": true, "has_wiki": true}'
+ng new angular-client-using-angular-module-example-v3 --routing
+cd angular-client-using-angular-module-example-v3
+git remote add origin https://github.com/FranckVE/angular-client-using-angular-module-example-v3
+ng g module blue-butterfly
+ng g component blue-butterfly
+```
+
+## open in WebStorm
+
+### add to git the blue-butterfly folder
+
+```
+right-click on the blue-butterfly folder
+[menu] > Git > Add
+```
+
+### test the app
+
+```
+ng serve --port 5456
+```
+
+go to http://localhost:5456 
+
+
+## export the blue-butterfly component from the blue-butterfly module
+
+In `blue-butterfly.module.ts` :
+
+```
+...
+import { BlueButterflyComponent } from './blue-butterfly.component';
+...
+@NgModule({
+  ...
+  exports: [
+    ...
+    BlueButterflyComponent
+    ...
+  ],
+  ...
+})
+...
+```
+
+## import and use blue-butterfly in the main app module
+
+### in `app.module.ts`
+
+```
+...
+import { BlueButterflyModule } from './blue-butterfly/blue-butterfly.module';
+...
+@NgModule({
+  ...
+  imports: [
+    ...
+    BlueButterflyModule
+    ...
+  ],
+  ...
+})
+...
+```
+
+### in `app.component.html`
+
+```html
+<app-blue-butterfly></app-blue-butterfly>
+```
+
+
+
+
+# original readme.md for AngularClientUsingAngularModuleExampleV3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
