@@ -256,6 +256,23 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+"angular-module-example-v3@https://github.com/FranckVE/angular-module-example-v3":
+  version "0.1.0"
+  resolved "https://github.com/FranckVE/angular-module-example-v3#d00d7e925d23c2d865e029e6c62f79e21c8d285f"
+  dependencies:
+    "@angular/animations" "^4.0.0"
+    "@angular/common" "^4.0.0"
+    "@angular/compiler" "^4.0.0"
+    "@angular/core" "^4.0.0"
+    "@angular/forms" "^4.0.0"
+    "@angular/http" "^4.0.0"
+    "@angular/platform-browser" "^4.0.0"
+    "@angular/platform-browser-dynamic" "^4.0.0"
+    "@angular/router" "^4.0.0"
+    core-js "^2.4.1"
+    rxjs "^5.4.1"
+    zone.js "^0.8.14"
+
 ansi-escapes@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-2.0.0.tgz#5bae52be424878dd9783e8910e3fc2922e83c81b"
@@ -5180,16 +5197,9 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
-ws@1.1.2:
+ws@1.1.2, ws@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
-
-ws@^1.0.1:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.4.tgz#57f40d036832e5f5055662a397c4de76ed66bf61"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"

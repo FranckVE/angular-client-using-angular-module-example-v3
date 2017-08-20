@@ -76,6 +76,59 @@ import { BlueButterflyModule } from './blue-butterfly/blue-butterfly.module';
 <app-blue-butterfly></app-blue-butterfly>
 ```
 
+## add an external dependency of your own (public GitHub project `angular-module-example-v3`)
+
+```bash
+yarn add https://github.com/FranckVE/angular-module-example-v3
+```
+
+Will output :
+
+```
+yarn add v0.24.6
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 📃  Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+└─ angular-module-example-v3@0.1.0
+✨  Done in 7.71s.
+```
+
+Check the change in `package.json` inside `"dependencies": {`:
+
+```
+    "angular-module-example-v3": "https://github.com/FranckVE/angular-module-example-v3",
+```
+
+## use the external module `angular-module-example-v3`
+
+In blue-butterfly, `blue-butterfly.module.ts` :
+
+```javascript
+...
+import { SquareOakModule } from 'angular-module-example-v3/src/app';
+...
+
+@NgModule({
+  imports: [
+    ...
+    SquareOakModule,
+    ...
+  ],
+  ...
+})
+...
+```
+
+In blue-butterfly, `blue-butterfly.component.html` :
+
+```html
+<app-square-oak></app-square-oak>
+```
+
+Check everything works with `ng serve`.
 
 
 
